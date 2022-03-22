@@ -1,0 +1,21 @@
+<html lang="en">
+
+<body>
+
+    <h2>Days Available</h2>
+
+    <% if (bookings.length > 0) { %>
+        <% bookings.forEach(booking => { %>
+          <a href="/bookings/<%= booking._id %>">
+            <h3><%= booking.name %></h3>
+            <p><%= booking.phone %></p>
+            <p><%= booking.bookingDate %></p>
+          </a>
+        <% }) %>
+  <% } else { %>
+        <p>There are no blogs to display...</p>
+    <% } %>
+  
+
+</body>
+</html>

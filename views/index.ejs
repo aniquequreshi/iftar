@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+  <title>ISRA Masjid Iftar</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="container">
+
+
+    <h2>Days Available</h2>
+    <table>
+
+        <% if (bookings.length > 0) { %>
+          <% bookings.forEach(booking => { %>
+            <tr>
+              <% if (booking.dateAvailable & booking.dateDisplay ) { %>
+                <td><a href="/bookings/<%= booking._id %>">
+                <button class="btn-green">Select</button>
+                </a></td>
+              <% } else{ %>
+                <td><button class="btn-red" disabled>Unavailable</button></td>
+              <% } %>
+
+              <td>
+                <%= booking.bookingDate %>
+              </td>
+  
+              <% if ((!booking.dateAvailable) & booking.dateDisplay ){ %>
+                <td>hosted by <%= booking.name %></td>
+              <% } else if (!(booking.dateAvailable & booking.dateDisplay) ){ %>
+                <td>Pending Verification</td>
+              <% } else{ %>
+                <td>&nbsp;</td>
+              <% } %>
+
+            </tr>
+          <% }) %>  
+
+        <% } else { %>
+          <p>There are no Availble Dates.</p>
+        <% } %>
+        
+  </table>
+
+</div>
+</body>
+
+</html>

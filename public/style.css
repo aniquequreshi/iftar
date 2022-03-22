@@ -1,0 +1,25 @@
+body {
+    background-color: darkgreen;
+}
+.container {
+    background-color: blanchedalmond;
+    margin: 100px;
+    padding: 50px;
+}
+
+
+.btn-red {
+    background-color: darkred;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+}
+
+.btn-green {
+    background-color: darkgreen;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 100px;
+}

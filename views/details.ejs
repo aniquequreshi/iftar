@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <title>ISRA Masjid</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+
+<body>
+
+  <div class="container" >
+    <h2><%= booking.title %></h2>
+    <div >
+      <p>Date Selected: <%= booking.bookingDate %></p>
+    </div>
+    <form action="/bookings" method="post">
+      <p>
+          <label>Name</label>
+          <input type="text" name="name" id="name" required>
+      </p>
+      <p>
+          <label>Cell Phone</label>
+          <input type="tel" name="phone" id="phone" placeholder="###-###-####" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <small>Format: 555-555-5555</small>
+      </p>
+      <p>
+          <label><input type="radio" name="bringFood" value="food" required id="food">I will bring food for about 100 people.</label>
+          <br>
+          <label><input type="radio" name="bringFood" required value="cater" id="cater">I will give $1,000 to mosque to have the food catered.</label>
+      </p>
+      
+      <input type="hidden" name="id" value="<%= booking._id %>">
+
+      <label>Until we verify your information, it will show as "Pending Verification" for the date you selected.</label>
+      <br>
+
+      <button type="submit" class="btn-green">Submit</button>
+      <a href="/bookings"> Cancel </a>
+    </form>
+    
+    
+  </div>
+  
+
+</body>
+</html>
