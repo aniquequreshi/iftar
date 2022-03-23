@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const bookingRoutes = require('./routes/bookingRoutes');
 
 const app = express()
-const PORT = 3000
+const PORT = 3001
 
 // connect to mongodb & listen for requests
 const dbURI = "mongodb+srv://anique:Test1234@clusteriftar.7le4a.mongodb.net/Iftar?retryWrites=true&w=majority"

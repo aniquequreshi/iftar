@@ -1,9 +1,8 @@
 body {
-    background-color: darkgreen;
+    background-color: rgb(36, 59, 109);
 }
 .container {
     background-color: blanchedalmond;
-    margin: 100px;
     padding: 50px;
 }
 
